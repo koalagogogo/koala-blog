@@ -1,0 +1,41 @@
+{
+	"presets": [
+		"next/babel"
+	],
+	"plugins": [
+		[
+			"styled-jsx/babel",
+			{
+				"plugins": [
+					"styled-jsx-plugin-less"
+				]
+			}
+		],
+		[
+			"module-resolver",
+			{
+				"cwd": "babelrc",
+				"root": ["."],
+				"alias": {
+					"components": "./components",
+					"~": "./components",
+					"static": "./static",
+					"@": "./static"
+				}
+			}
+		],
+		[
+			"inline-import",
+			{
+				"extensions": [".css"]
+			}
+		],
+		[
+			"import",
+			{
+				"libraryName": "antd",
+				"style": false
+			}
+		]
+	]
+}
